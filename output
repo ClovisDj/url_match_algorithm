@@ -1,0 +1,13 @@
+*,x,y,z
+a,*,*
+NO MATCH
+NO MATCH
+foo,bar,baz
+*,b,*
+NO MATCH
+*,test@exam.com,*
+NO MATCH
+*,test@exam.com,*
+NO MATCH
+*,?q=python,*
+*,*inside+,*

@@ -1,0 +1,30 @@
+          ##########################
+          ### Url Patterns Match ###
+          ##########################
+
+
+          >>> Scope <<<
+Given a in input url of the form a/b/c/d, abc/fkg/tJ34/, /H/rh/cd/90/ etc... the scope of this
+algorithm if to identify the best pattern of the form: a/*/c/d,  abc/*/* and */rh/cd/* which
+match respectively the previous urls. Where the wildcard '*' matches any ASCII non empty string
+character and can appears more than once in a given pattern.
+This algorithm also selects the best pattern, with the criteria of less wildcard and its appearance
+further to the right of the pattern.
+
+
+          >>> Code Execution <<<
+This code has been developed with python 3.6
+
+To run cd to this dir folder and run a command of the form:
+  $ cat data | python3 patterns.py > output
+
+For results case insensitive add -c True like this:
+  $ cat data | python3 patterns.py -c True > output
+
+
+          >>> Performances <<<
+This algorithm complexity is less than quadratic since for a given path, we search for
+potential patterns match only on patterns of the same length as the url.
+Furthermore, while testing a path against a pattern, we do discard that
+pattern early on if there is no match in a single field without going through the
+whole pattern.
